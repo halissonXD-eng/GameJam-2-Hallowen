@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 596409c30c5f52048bea96f3aa35fbc6
+  productGUID: 9325c67adec36f24aa095fb38159f1c7
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -628,14 +628,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: GameJam_2_hallowen
+  metroPackageName: GameJam-2-Hallowen
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: GameJam_2_hallowen
+  metroApplicationDescription: GameJam-2-Hallowen
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -702,7 +702,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 1
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 0e501c3c-daa5-4406-ace0-079724dd8056
   framebufferDepthMemorylessMode: 0
