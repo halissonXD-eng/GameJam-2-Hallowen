@@ -1003,6 +1003,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyPool
       objectReference: {fileID: 0}
+    - target: {fileID: 8039532323099704198, guid: 659f4b97fe2033c4c90a95ad0e0a453c, type: 3}
+      propertyPath: bossPrefab
+      value: 
+      objectReference: {fileID: 183795938531665735, guid: 042d28239a25f5242a1a01a8f135cde4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

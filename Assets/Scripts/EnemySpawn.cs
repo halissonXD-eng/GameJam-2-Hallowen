@@ -8,7 +8,6 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private Transform[] spawnPoints; 
     private int enemiesPerRound = 2;
     [SerializeField] int round = 1;
-    [SerializeField] int bossPerRound ;
     public bool bossAvailable;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +29,6 @@ public class EnemySpawn : MonoBehaviour
             {
                 bossAvailable = true;
                 Debug.Log("Ronda Boss");
-                bossPerRound = 1;
             }else
             {
                 bossAvailable = false;
@@ -47,18 +45,11 @@ public class EnemySpawn : MonoBehaviour
 
                 if(bossAvailable)
                 {
-                    for(int j = 0; j < bossPerRound; j++)
-                    {
-                        GameObject boss = EnemyPool.Instance.RequestBoss();
-                        boss.transform.position = spawnPoints[enemyPosIndex].transform.position;
-                        Debug.Log("Boss aparece");
-                        bossAvailable = false;
-
-                         if(round >= 6)
-                        {
-                            bossPerRound++;
-                        }
-                    }
+                    int bossPosIndex = Random.Range(0,spawnPoints.Length);
+                    GameObject boss = EnemyPool.Instance.RequestBoss();
+                    boss.transform.position = spawnPoints[bossPosIndex].transform.position;
+                    Debug.Log("Boss aparece");
+                    bossAvailable = false;
                 }
 
                 yield return new WaitForSeconds(2);
