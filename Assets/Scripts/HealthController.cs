@@ -5,8 +5,11 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
 
-    [SerializeField] private float maxHealth;
+    [SerializeField] public float maxHealth;
     public float health;
+    public bool dieEnemy;
+
+    ScoreManager score;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +28,15 @@ public class HealthController : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            if(gameObject.CompareTag("Enemy") || gameObject.CompareTag("Boss"))
+            if(gameObject.CompareTag("Enemy"))
             {
                 gameObject.SetActive(false);
+                score.AddScore(25);
+                health = maxHealth;
+            } else if(gameObject.CompareTag("Boss"))
+            {
+                gameObject.SetActive(false);
+                score.AddScore(50);
                 health = maxHealth;
             }
             

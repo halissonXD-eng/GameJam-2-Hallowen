@@ -189,8 +189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb36b22801cb9bd4182913c2c66b8178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 10
   health: 0
+  dieEnemy: 0
 --- !u!114 &48162244973611924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,4 +204,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a8bc5b74587c145a27f4256a393e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageBoss: {fileID: 183795938531665735, guid: 042d28239a25f5242a1a01a8f135cde4, type: 3}
