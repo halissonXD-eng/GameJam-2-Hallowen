@@ -9,7 +9,7 @@ public class EnemyPool : MonoBehaviour
     [SerializeField] private List<GameObject> enemyList;
     [SerializeField] private GameObject bossPrefab;
     [SerializeField] private int poolSize;
-    private GameObject enemyGameObject;
+
     private GameObject bossObject;
      //Creamos el patron Singleton para obtener los metodos y variables del script sin referenciarlo en otros
     private static EnemyPool instace;
@@ -30,7 +30,6 @@ public class EnemyPool : MonoBehaviour
         // Start is called before the first frame update
     void Start()
     {
-        enemyGameObject = GameObject.FindGameObjectWithTag("SpawnEnemy");
         AddEnemyToPool(poolSize);
         AddBossToPool();
     }

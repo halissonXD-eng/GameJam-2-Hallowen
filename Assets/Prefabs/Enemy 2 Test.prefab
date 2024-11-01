@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  minDistance: 0
+  minDistance: 2
   knockBackPower: 0
   isOnTouchPlayer: 0
 --- !u!50 &3736662451164403129
@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb36b22801cb9bd4182913c2c66b8178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
   maxHealth: 50
+  health: 0
 --- !u!114 &-8124945692502923291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +203,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a8bc5b74587c145a27f4256a393e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageBoss: {fileID: 183795938531665735, guid: 042d28239a25f5242a1a01a8f135cde4, type: 3}

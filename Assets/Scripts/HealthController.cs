@@ -25,10 +25,10 @@ public class HealthController : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            if(gameObject.CompareTag("Enemy"))
+            if(gameObject.CompareTag("Enemy") || gameObject.CompareTag("Boss"))
             {
-                health = maxHealth;
                 gameObject.SetActive(false);
+                health = maxHealth;
             }
             
             if(gameObject.CompareTag("Player"))

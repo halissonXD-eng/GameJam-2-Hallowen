@@ -6,27 +6,24 @@ public class EnemyAttack : MonoBehaviour
 {
     
     private HealthController playerHealth;
-    private EnemyMovement enemyState;
 
     // Start is called before the first frame update
     void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<HealthController>();
-        enemyState = GetComponent<EnemyMovement>();
-        
     }
 
     // Update is called once per frame
    
 
     private void OnCollisionEnter2D(Collision2D other) {
-          if(other.gameObject.CompareTag("Player"))
+          if(other.gameObject.CompareTag("Player") && playerHealth.health >= 0)
         {  
-             if(playerHealth.health >= 0)
-        {
-            playerHealth.GetHurt(2);
-        }
+            int damage = gameObject.CompareTag("Boss") ? 4 : 2;
+            playerHealth.GetHurt(damage);
+        
         } 
     }
+
 }
