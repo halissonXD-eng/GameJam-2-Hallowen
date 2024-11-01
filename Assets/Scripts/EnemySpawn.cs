@@ -25,10 +25,9 @@ public class EnemySpawn : MonoBehaviour
     {
         while (true)
         {
-              if(round % 3 == 0)
+              if(round % 5 == 0)
             {
                 bossAvailable = true;
-                Debug.Log("Ronda Boss");
             }else
             {
                 bossAvailable = false;
@@ -48,7 +47,6 @@ public class EnemySpawn : MonoBehaviour
                     int bossPosIndex = Random.Range(0,spawnPoints.Length);
                     GameObject boss = EnemyPool.Instance.RequestBoss();
                     boss.transform.position = spawnPoints[bossPosIndex].transform.position;
-                    Debug.Log("Boss aparece");
                     bossAvailable = false;
                 }
 
