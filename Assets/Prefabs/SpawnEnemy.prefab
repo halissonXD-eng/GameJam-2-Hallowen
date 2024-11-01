@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: -9219681465163878707}
   m_Layer: 0
   m_Name: SpawnEnemy
-  m_TagString: Untagged
+  m_TagString: SpawnEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,6 +146,8 @@ MonoBehaviour:
   - {fileID: 7669247343188664170}
   - {fileID: 7712425311222021873}
   - {fileID: 2364561263986757676}
+  round: 1
+  bossAvailable: 0
 --- !u!1 &5003836912360520898
 GameObject:
   m_ObjectHideFlags: 0

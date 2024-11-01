@@ -30,6 +30,11 @@ public class HealthController : MonoBehaviour
                 health = maxHealth;
                 gameObject.SetActive(false);
             }
+            
+            if(gameObject.CompareTag("Player"))
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }

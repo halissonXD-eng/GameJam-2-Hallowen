@@ -39,6 +39,7 @@ public class EnemyMovement : MonoBehaviour
             Vector2 pushDirection = (other.transform.position - transform.position).normalized;
             other.rigidbody.AddForce(pushDirection * knockBackPower, ForceMode2D.Impulse);
             isOnTouchPlayer = true;
+            gameObject.SetActive(false);
         } 
         
     }

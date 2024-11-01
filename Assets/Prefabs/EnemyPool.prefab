@@ -44,6 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7553d4b4a6d23634bb3e7740e4407da0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 183795938531665735, guid: eed8fd80d437c3947afcae7278e768bd, type: 3}
+  enemyPrefab:
+  - {fileID: 183795938531665735, guid: eed8fd80d437c3947afcae7278e768bd, type: 3}
+  - {fileID: 5153334183291618111, guid: 2d1f9b6c3bf6819479c995d60f8f1a87, type: 3}
   enemyList: []
+  inactiveBoss: {fileID: 183795938531665735, guid: 042d28239a25f5242a1a01a8f135cde4, type: 3}
   poolSize: 4
+  bossSpawnedThisRound: 0
