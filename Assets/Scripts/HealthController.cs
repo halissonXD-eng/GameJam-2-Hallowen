@@ -6,15 +6,11 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
 
-    [SerializeField] public float maxHealth;
+    [SerializeField] private float maxHealth;
     public float health;
     private SlideLifeController slideLife;
     private GameObject slider;
     public bool gameOver;
-
-    //Prueba
-    ScoreManager score;
-
     // Start is called before the first frame update
     void Start()
     {

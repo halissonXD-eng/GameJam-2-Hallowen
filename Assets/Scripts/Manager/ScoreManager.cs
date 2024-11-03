@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ScoreManager : GameManager
+public class ScoreManager : MonoBehaviour
 {
    
     [SerializeField] int score;
@@ -14,17 +14,12 @@ public class ScoreManager : GameManager
     {
         AddScore(0);
     }
-    void Update()
-    {
-        textScore.text = GetScore();
-    }
+
     public void AddScore(int scoreValue)
     {
         score += scoreValue;
+        textScore.text = score.ToString();
+        Debug.Log(score);
     }
 
-    public string GetScore()
-    {
-        return score.ToString();
-    }
 }

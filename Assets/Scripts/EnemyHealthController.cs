@@ -7,7 +7,9 @@ public class EnemyHealthController : MonoBehaviour
    
     [SerializeField] public float maxHealth;
     public float health;
-    ScoreManager score;
+    
+    private ScoreManager score;
+    private GameObject scorePrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,8 @@ public class EnemyHealthController : MonoBehaviour
 
     public void GetHurt(int amount)
     {
+        scorePrefab = GameObject.Find("GameManager");
+        score = scorePrefab.GetComponent<ScoreManager>();
         health -= amount;
         if (health <= 0)
         {
@@ -39,6 +43,4 @@ public class EnemyHealthController : MonoBehaviour
             }
         }
     }
-
-    
 }
