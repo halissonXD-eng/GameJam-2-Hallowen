@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1995534346758098493}
   - component: {fileID: 7512566746069140989}
   - component: {fileID: 7891445176584997496}
-  - component: {fileID: 127379207680825591}
   - component: {fileID: 48162244973611924}
+  - component: {fileID: -1188435747546279632}
   m_Layer: 0
   m_Name: Boss Test
   m_TagString: Boss
@@ -177,21 +177,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &127379207680825591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 183795938531665735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb36b22801cb9bd4182913c2c66b8178, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 20
-  health: 0
-  dieEnemy: 0
 --- !u!114 &48162244973611924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,3 +189,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a8bc5b74587c145a27f4256a393e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1188435747546279632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183795938531665735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f4aeea37f6de94fad34793b2ac3e10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  health: 0

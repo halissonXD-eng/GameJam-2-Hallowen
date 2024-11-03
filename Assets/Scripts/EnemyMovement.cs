@@ -8,7 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float knockBackPower;
      public bool isOnTouchPlayer;
     private Transform player;
-
+    
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
