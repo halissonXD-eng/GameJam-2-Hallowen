@@ -15,11 +15,25 @@ public class PlayerController : MonoBehaviour
     }
     private void Update()
     {
-        movementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        movementDirection = new Vector2(horizontalInput, Input.GetAxisRaw("Vertical")).normalized;
+         // Rotar el jugador según la dirección de movimiento horizontal
+         if (horizontalInput > 0)
+        {
+            // Girar hacia la izquierda (180 grados en el eje Y)
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else if (horizontalInput < 0)
+        {
+            // Girar hacia la derecha (0 grados en el eje Y)
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
     {
         rb2D.MovePosition(rb2D.position + (movementDirection * movementSpeed *  Time.deltaTime)); 
     }
+
+    
 }

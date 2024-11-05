@@ -8,10 +8,11 @@ public class ScoreManager : MonoBehaviour
    
     [SerializeField] int score;
 
-    public TextMeshProUGUI textScore;
+    private TextMeshProUGUI textScore;
 
     void Start()
     {
+        textScore = GameObject.Find("puntaje").GetComponent<TextMeshProUGUI>();
         AddScore(0);
     }
 
@@ -19,7 +20,6 @@ public class ScoreManager : MonoBehaviour
     {
         score += scoreValue;
         textScore.text = score.ToString();
-        Debug.Log(score);
     }
 
 }

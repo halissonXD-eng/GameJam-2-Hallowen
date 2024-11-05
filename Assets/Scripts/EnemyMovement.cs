@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -8,15 +9,21 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float knockBackPower;
      public bool isOnTouchPlayer;
     private Transform player;
+    private bool isFacingRight = false;
     
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    void Update()
+    {
+       
+    }
     void FixedUpdate()
     {
         Follow();
+
     }
 
     private void Follow()
@@ -42,5 +49,4 @@ public class EnemyMovement : MonoBehaviour
         } 
         
     }
-  
 }

@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab:
-  - {fileID: 183795938531665735, guid: eed8fd80d437c3947afcae7278e768bd, type: 3}
-  - {fileID: 5153334183291618111, guid: 2d1f9b6c3bf6819479c995d60f8f1a87, type: 3}
+  - {fileID: 3002860976732922619, guid: f4477818589abc44eae62ab2720c5b70, type: 3}
+  - {fileID: 3103117160735236030, guid: 134da78841b9422439886b245a51a3e0, type: 3}
   enemyList: []
-  bossPrefab: {fileID: 183795938531665735, guid: 042d28239a25f5242a1a01a8f135cde4, type: 3}
+  bossPrefab: {fileID: 4060455899942368293, guid: e0e9bd2dc1f21384d8784071120c0e57, type: 3}
   poolSize: 4
