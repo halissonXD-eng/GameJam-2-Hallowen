@@ -9,11 +9,12 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float knockBackPower;
      public bool isOnTouchPlayer;
     private Transform player;
-    private bool isFacingRight = false;
+   private Animator animator;
     
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,11 +32,13 @@ public class EnemyMovement : MonoBehaviour
         //Mientas sea mayor a la minima distancia se mueve, sino ataca
         if(!isOnTouchPlayer)
         {
+            animator.SetBool("caminando",true);
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
 
         if(Vector2.Distance(transform.position, player.transform.position) > minDistance)
         {
+            animator.SetBool("caminando",false);
             isOnTouchPlayer = false;
         }
     }

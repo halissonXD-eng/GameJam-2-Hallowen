@@ -8,6 +8,7 @@ TagManager:
   - SpawnEnemy
   - Boss
   - Slider
+  - Map
   layers:
   - Default
   - TransparentFX

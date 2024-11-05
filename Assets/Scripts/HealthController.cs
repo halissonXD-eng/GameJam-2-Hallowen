@@ -50,5 +50,6 @@ public class HealthController : MonoBehaviour
         animator.SetBool("Muerto",true);
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
         gameOver = true;
+        gameObject.SetActive(false);
     }
 }

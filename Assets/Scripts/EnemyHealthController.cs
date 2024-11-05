@@ -10,11 +10,13 @@ public class EnemyHealthController : MonoBehaviour
     
     private ScoreManager score;
     private GameObject scorePrefab;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,19 +30,27 @@ public class EnemyHealthController : MonoBehaviour
         scorePrefab = GameObject.Find("GameManager");
         score = scorePrefab.GetComponent<ScoreManager>();
         health -= amount;
+        animator.SetTrigger("Herido");
         if (health <= 0)
         {
             if(gameObject.CompareTag("Enemy"))
             {
                 score.AddScore(25);
-                gameObject.SetActive(false);
-                health = maxHealth;
+                StartCoroutine(DieAnimation()); 
+                
             } else if(gameObject.CompareTag("Boss"))
             {
                 score.AddScore(50);
-                gameObject.SetActive(false);
-                health = maxHealth;
+                StartCoroutine(DieAnimation()); 
             }
         }
+    }
+
+    IEnumerator DieAnimation()
+    {
+        animator.SetBool("Muerto",true);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+        gameObject.SetActive(false);
+        health = maxHealth;
     }
 }

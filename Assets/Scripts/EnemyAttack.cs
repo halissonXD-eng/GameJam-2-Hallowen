@@ -13,6 +13,7 @@ public class EnemyAttack : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = player.GetComponent<HealthController>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,6 +22,7 @@ public class EnemyAttack : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
           if(other.gameObject.CompareTag("Player") && playerHealth.health >= 0)
         {  
+            animator.SetTrigger("atacando");
             int damage = gameObject.CompareTag("Boss") ? 4 : 2;
             playerHealth.GetHurt(damage);
         

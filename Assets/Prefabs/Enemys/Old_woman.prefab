@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6999062320466935150}
   - component: {fileID: -9040505974507383252}
   - component: {fileID: -6032091229013966392}
+  - component: {fileID: -7468642765505018866}
   m_Layer: 0
   m_Name: Old_woman
   m_TagString: Enemy
@@ -193,3 +194,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a8bc5b74587c145a27f4256a393e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &-7468642765505018866
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3103117160735236030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e8477ce771803aa4ab77276fcc6923d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
