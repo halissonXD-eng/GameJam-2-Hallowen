@@ -5,13 +5,14 @@ using TMPro;
 
 public class TimerManager : MonoBehaviour
 {
-    public TextMeshProUGUI timerText;
+    private TextMeshProUGUI timerText;
     private float timeElapsed = 0;
     private bool timerIsRunning = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
         timerIsRunning = true;
     }
     private void Update()
@@ -26,7 +27,7 @@ public class TimerManager : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(timeElapsed / 60); 
         int seconds = Mathf.FloorToInt(timeElapsed % 60);
-        timerText.text = "Time: " + minutes.ToString("00") + ":" + seconds.ToString("00");
+        timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
     }
     public void PauseTimer()
     {

@@ -11,12 +11,14 @@ public class HealthController : MonoBehaviour
     private SlideLifeController slideLife;
     private GameObject slider;
     public bool gameOver;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
         slider = GameObject.FindGameObjectWithTag("Slider");
         slideLife = slider.GetComponent<SlideLifeController>();
+        animator = GetComponent<Animator>();
         slideLife.SetSliderLife(health);
     }
 
@@ -29,10 +31,11 @@ public class HealthController : MonoBehaviour
     public void GetHurt(int amount)
     {
         health -= amount;
+        animator.SetTrigger("Herido");
         slideLife.SetActualLife(health);
-        if (health <= 0){
-            gameObject.SetActive(false);
-            gameOver = true;
+        if (health <= 0)
+        {
+            StartCoroutine(DieAnimation()); 
         }
     }
     
@@ -40,5 +43,12 @@ public class HealthController : MonoBehaviour
     public float GetHealth()
     {
         return health;
+    }
+
+    IEnumerator DieAnimation()
+    {
+        animator.SetBool("Muerto",true);
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
+        gameOver = true;
     }
 }

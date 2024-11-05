@@ -10,6 +10,7 @@ public class PlayerAttack : MonoBehaviour
 
     private GameObject enemyPrefab;
     private GameObject bossPrefab;
+    private Vector3 initialPosition;
         // Start is called before the first frame update
     void Start()
     {
@@ -25,13 +26,20 @@ public class PlayerAttack : MonoBehaviour
             
             //Debug.Log("No esta el boss");
         }
-        
+        initialPosition = transform.position;
     }
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
-        
+        // Calcular la distancia recorrida
+        float distanceTravelled = Vector3.Distance(initialPosition, transform.position);
+
+        // Destruir el objeto si la distancia es mayor a 10
+        if (distanceTravelled > 10f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     
@@ -44,6 +52,9 @@ public class PlayerAttack : MonoBehaviour
         {
             bossHealth.GetHurt(10);
             Destroy(gameObject);
-        }
-    }   
+        }else if(other.gameObject.CompareTag("Map"))
+        {
+            Destroy(gameObject);
+        }  
+    } 
 }

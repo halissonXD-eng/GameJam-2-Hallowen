@@ -10,10 +10,13 @@ public class BatController : MonoBehaviour
     public int batCount = 1;
 
     private bool isShooting = false;
+
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,6 +24,7 @@ public class BatController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !isShooting)
         {
+            animator.SetTrigger("Ataco");
             Vector3 targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPosition.z = 0f;
             Vector3 direction = (targetPosition - transform.position).normalized;
