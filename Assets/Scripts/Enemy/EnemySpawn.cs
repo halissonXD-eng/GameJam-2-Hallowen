@@ -10,13 +10,12 @@ public class EnemySpawn : MonoBehaviour
 
     public bool bossAvailable;
 
-     private RoundManager round;
-    private GameObject roundPrefab;
-    // Start is called before the first frame update
+    RoundManager round;
+
     void Start()
     {
-        roundPrefab = GameObject.Find("GameManager");
-        round = roundPrefab.GetComponent<RoundManager>();
+        round = GameObject.Find("DataManager").GetComponent<RoundManager>();
+
        StartCoroutine(SpawnEnemy());
     }
 
