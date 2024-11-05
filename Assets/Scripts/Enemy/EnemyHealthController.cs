@@ -8,8 +8,7 @@ public class EnemyHealthController : MonoBehaviour
     [SerializeField] public float maxHealth;
     public float health;
     
-    private ScoreManager score;
-    private GameObject scorePrefab;
+    private ScoreGame score;
     private Animator animator;
     public bool isDead;
 
@@ -21,15 +20,11 @@ public class EnemyHealthController : MonoBehaviour
         isDead = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
 
     public void GetHurt(int amount)
     {
-        scorePrefab = GameObject.Find("GameManager");
-        score = scorePrefab.GetComponent<ScoreManager>();
+
+        score = GameObject.Find("UI").GetComponent<ScoreGame>();
         health -= amount;
         animator.SetTrigger("Herido");
         if (health <= 0)

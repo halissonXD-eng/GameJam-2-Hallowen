@@ -20,13 +20,13 @@ public class PlayerController : MonoBehaviour
          // Rotar el jugador según la dirección de movimiento horizontal
          if (horizontalInput > 0)
         {
-            // Girar hacia la izquierda (180 grados en el eje Y)
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            // Girar hacia la izquierda (resta la scala en x)
+            transform.localScale = new Vector3(-2.5f,2.5f,2.5f);
         }
         else if (horizontalInput < 0)
         {
-            // Girar hacia la derecha (0 grados en el eje Y)
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            // Girar hacia la derecha
+            transform.localScale = new Vector3(2.5f,2.5f,2.5f);
         }
     }
     // Update is called once per frame
