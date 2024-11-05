@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -2272846256024204859}
   - component: {fileID: 1459106052176990150}
   - component: {fileID: -2458472749483089545}
+  - component: {fileID: 7742590724907679953}
   m_Layer: 0
   m_Name: Old_man
   m_TagString: Boss
@@ -185,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b4d97a710927a4188ef6934b21ae30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 2
   minDistance: 2
   knockBackPower: 1
   isOnTouchPlayer: 0
@@ -203,6 +204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   health: 0
+  isDead: 0
 --- !u!114 &-2458472749483089545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,3 +217,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a8bc5b74587c145a27f4256a393e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7742590724907679953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4060455899942368293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5901b4781d80f94cbf15a691b723d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpPrefab: {fileID: 2538184243592491072, guid: dd747a2160f2e1b47b1fa36bc52e99bd, type: 3}
