@@ -11,18 +11,19 @@ public class EnemyHealthController : MonoBehaviour
     private ScoreManager score;
     private GameObject scorePrefab;
     private Animator animator;
+    public bool isDead;
 
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
         animator = GetComponent<Animator>();
+        isDead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-    
     }
 
     public void GetHurt(int amount)
@@ -35,12 +36,14 @@ public class EnemyHealthController : MonoBehaviour
         {
             if(gameObject.CompareTag("Enemy"))
             {
+                isDead = true;
                 score.AddScore(25);
                 StartCoroutine(DieAnimation()); 
                 
             } else if(gameObject.CompareTag("Boss"))
             {
                 score.AddScore(50);
+                isDead = true;
                 StartCoroutine(DieAnimation()); 
             }
         }
@@ -51,6 +54,7 @@ public class EnemyHealthController : MonoBehaviour
         animator.SetBool("Muerto",true);
         yield return new WaitForSeconds(animator.GetCurrentAnimatorClipInfo(0).Length);
         gameObject.SetActive(false);
+        isDead = false;
         health = maxHealth;
     }
 }

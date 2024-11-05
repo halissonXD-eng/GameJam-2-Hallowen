@@ -177,28 +177,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1525633141675330961, guid: a3deb925d8bf86e46b2af84dfa254c64, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 882764848}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3deb925d8bf86e46b2af84dfa254c64, type: 3}
---- !u!1 &882764843 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1525633141675330961, guid: a3deb925d8bf86e46b2af84dfa254c64, type: 3}
-  m_PrefabInstance: {fileID: 434865769}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &882764848
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 882764843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96af04fce2aea64419c1e944f9744f2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1113809042
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,10 +279,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -3898253149332754186, guid: bf3ff917e1970cd4f9f6f65926fe5fd2, type: 3}
-      propertyPath: slider
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6131333991708848734, guid: bf3ff917e1970cd4f9f6f65926fe5fd2, type: 3}
       propertyPath: m_Name
       value: PJ
@@ -457,7 +433,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cd7b74542cf05643a7fc0bc84710628, type: 3}
---- !u!1001 &3592921208696539324
+--- !u!1001 &2045560649
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -577,7 +553,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1113809045}
   - {fileID: 3858145942719625962}
-  - {fileID: 3592921208696539324}
   - {fileID: 1740848774}
   - {fileID: 1987113462}
   - {fileID: 434865769}
+  - {fileID: 2045560649}
