@@ -6,20 +6,23 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
    
-    [SerializeField] int score;
+    public int score;
 
-    private TextMeshProUGUI textScore;
+    int BestScore;
 
     void Start()
     {
-        textScore = GameObject.Find("puntaje").GetComponent<TextMeshProUGUI>();
         AddScore(0);
     }
-
+    
     public void AddScore(int scoreValue)
     {
         score += scoreValue;
-        textScore.text = score.ToString();
+    }
+
+    public void SaveBestScore()
+    {
+        BestScore = score;
     }
 
 }

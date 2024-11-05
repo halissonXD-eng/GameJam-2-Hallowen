@@ -6,7 +6,7 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
 
-    [SerializeField] private float maxHealth;
+    public float maxHealth;
     public float health;
     private SlideLifeController slideLife;
     private GameObject slider;

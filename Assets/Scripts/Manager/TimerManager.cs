@@ -9,9 +9,13 @@ public class TimerManager : MonoBehaviour
     private float timeElapsed = 0;
     private bool timerIsRunning = false;
 
+    //cariable para almacenar el tiempo 
+    TimeContainer timeContainer;
+
     // Start is called before the first frame update
     void Start()
     {
+        timeContainer = GameObject.Find("GameManager").GetComponent<TimeContainer>();
         timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
         timerIsRunning = true;
     }
@@ -28,6 +32,7 @@ public class TimerManager : MonoBehaviour
         int minutes = Mathf.FloorToInt(timeElapsed / 60); 
         int seconds = Mathf.FloorToInt(timeElapsed % 60);
         timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+        timeContainer.AddTime(minutes.ToString("00") + ":" + seconds.ToString("00"));
     }
     public void PauseTimer()
     {
