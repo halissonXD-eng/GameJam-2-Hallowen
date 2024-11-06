@@ -662,6 +662,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 9000847806331625642, guid: bc4e6657e5562ca4a8c3e1c1e53f6012, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.53
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8221624584058872181, guid: bc4e6657e5562ca4a8c3e1c1e53f6012, type: 3}

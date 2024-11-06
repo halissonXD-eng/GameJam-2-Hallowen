@@ -10,6 +10,7 @@ TagManager:
   - Slider
   - Map
   - PowerUp
+  - Bullet
   layers:
   - Default
   - TransparentFX

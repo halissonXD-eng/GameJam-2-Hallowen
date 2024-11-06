@@ -24,7 +24,7 @@ public class EnemyHealthController : MonoBehaviour
     public void GetHurt(int amount)
     {
 
-        score = GameObject.Find("UI").GetComponent<ScoreGame>();
+        score = GameObject.Find("DataManager").GetComponent<ScoreGame>();
         health -= amount;
         animator.SetTrigger("Herido");
         if (health <= 0)

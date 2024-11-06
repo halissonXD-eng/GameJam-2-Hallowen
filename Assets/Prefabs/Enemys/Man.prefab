@@ -32,9 +32,9 @@ Transform:
   m_GameObject: {fileID: 3002860976732922619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.71, y: 0.37, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 1.8051, y: 0.40454, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -200,7 +200,6 @@ MonoBehaviour:
   maxHealth: 50
   health: 0
   isDead: 0
-  powerUp: {fileID: 2538184243592491072, guid: dd747a2160f2e1b47b1fa36bc52e99bd, type: 3}
 --- !u!114 &2226039538903762830
 MonoBehaviour:
   m_ObjectHideFlags: 0
