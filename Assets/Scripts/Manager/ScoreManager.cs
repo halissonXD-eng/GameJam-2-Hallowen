@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
    
     public int score;
 
-    int BestScore;
+    public int BestScore;
 
     void Start()
     {

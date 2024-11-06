@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoundContainer : MonoBehaviour
 {
     int round;
-    int bestRound;
+    public int bestRound;
 
     public void addRound()
     {

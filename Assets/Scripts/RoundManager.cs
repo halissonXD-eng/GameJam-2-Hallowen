@@ -5,6 +5,7 @@ using TMPro;
 public class RoundManager : MonoBehaviour
 {
     public int round = 1;
+    public int bestRound;
     private TextMeshProUGUI textRound;
 
     RoundContainer roundContainer;
@@ -18,5 +19,10 @@ public class RoundManager : MonoBehaviour
     {
         round++;
         textRound.text = round.ToString();
+    }
+
+     public void SaveBestRound()
+    {
+        bestRound = round;
     }
 }

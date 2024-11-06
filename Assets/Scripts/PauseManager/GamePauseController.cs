@@ -37,33 +37,33 @@ public class GamePauseController : MonoBehaviour
         }
     }
 
-    void PauseGame() // Detiene el juego
+    public void PauseGame() // Detiene el juego
     {
-        Time.timeScale = 0;  
+        Time.timeScale = 0f;  
         if (pauseMenu != null)
         {
-            pauseMenu.SetActive(true);  // Activar el menú de pausa
+            pauseMenu.SetActive(true);  // Activar el menï¿½ de pausa
         }
         isPaused = true;
 
         if (backgroundMusic != null)
         {
-            backgroundMusic.Pause();  // Pausa la música
+            backgroundMusic.Pause();  // Pausa la mï¿½sica
         }
     }
 
-    void ResumeGame() // Reanuda el juego
+    public void ResumeGame() // Reanuda el juego
     {
-        Time.timeScale = 1;  // Reanudar el tiempo en el juego
+        Time.timeScale = 1f;  // Reanudar el tiempo en el juego
         if (pauseMenu != null)
         {
-            pauseMenu.SetActive(false);  // Desactivar el menú de pausa
+            pauseMenu.SetActive(false);  // Desactivar el menï¿½ de pausa
         }
         isPaused = false;
 
         if (backgroundMusic != null)
         {
-            backgroundMusic.UnPause();  // Reanuda la música
+            backgroundMusic.UnPause();  // Reanuda la mï¿½sica
         }
     }
 }

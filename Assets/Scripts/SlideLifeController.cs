@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SlideLifeController : MonoBehaviour
 {
-    private Slider slider;
+    [SerializeField] private Slider slider;
   
     void Start()
     {

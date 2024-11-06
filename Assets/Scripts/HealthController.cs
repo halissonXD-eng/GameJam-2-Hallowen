@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -9,14 +10,17 @@ public class HealthController : MonoBehaviour
     public float maxHealth;
     public float health;
     private SlideLifeController slideLife;
-    private GameObject slider;
+    [SerializeField] private GameObject slider;
     public bool gameOver;
     private Animator animator;
+
+    // Event
+    public event EventHandler playerDeath;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
-        slider = GameObject.FindGameObjectWithTag("Slider");
+        //slider = GameObject.FindGameObjectWithTag("Slider");
         slideLife = slider.GetComponent<SlideLifeController>();
         animator = GetComponent<Animator>();
         slideLife.SetSliderLife(health);
@@ -36,6 +40,7 @@ public class HealthController : MonoBehaviour
         if (health <= 0)
         {
             StartCoroutine(DieAnimation()); 
+            playerDeath?.Invoke(this, EventArgs.Empty);
         }
     }
     

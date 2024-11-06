@@ -11,6 +11,8 @@ public class TimerManager : MonoBehaviour
 
     //cariable para almacenar el tiempo 
     TimeContainer timeContainer;
+    public string bestTime;
+    public string time;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +34,21 @@ public class TimerManager : MonoBehaviour
         int minutes = Mathf.FloorToInt(timeElapsed / 60); 
         int seconds = Mathf.FloorToInt(timeElapsed % 60);
         timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
-        timeContainer.AddTime(minutes.ToString("00") + ":" + seconds.ToString("00"));
+        AddTime(minutes.ToString("00") + ":" + seconds.ToString("00"));
     }
     public void PauseTimer()
     {
         timerIsRunning = false;
+    }
+
+    public void BestTime()
+    {
+        bestTime = time;
+    }
+
+    public void AddTime(string timeGame)
+    {
+        time = timeGame;
     }
 
 }
