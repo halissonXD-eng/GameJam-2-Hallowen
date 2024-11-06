@@ -21,7 +21,6 @@ public class BossController : MonoBehaviour
         if (bossHealth.isDead && powerUpInstance == null)
         {
             ActivePowerUp();  // Llama a la función que crea el powerUp
-            Debug.Log("Se creo el powerup");
         }
     }
 

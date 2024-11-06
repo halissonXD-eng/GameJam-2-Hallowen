@@ -1803,7 +1803,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Drac Defence
+  m_text: Drack Defense
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bfc8c69cecbf1f4a8902fb367a1837c, type: 2}
   m_sharedMaterial: {fileID: -7684481392766783377, guid: 9bfc8c69cecbf1f4a8902fb367a1837c, type: 2}
@@ -1830,7 +1830,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 52.25
+  m_fontSize: 48.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
