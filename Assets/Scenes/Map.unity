@@ -820,6 +820,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 8305703041942857523, guid: 5cd7b74542cf05643a7fc0bc84710628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305703041942857523, guid: 5cd7b74542cf05643a7fc0bc84710628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2028265543634409952}
+    - target: {fileID: 8305703041942857523, guid: 5cd7b74542cf05643a7fc0bc84710628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: MenuScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8305703041942857523, guid: 5cd7b74542cf05643a7fc0bc84710628, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GamePauseController, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

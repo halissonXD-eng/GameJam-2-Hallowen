@@ -66,4 +66,10 @@ public class GamePauseController : MonoBehaviour
             backgroundMusic.UnPause();  // Reanuda la m�sica
         }
     }
+
+    public void MenuScene()
+    {
+        GameManager.Instance.SceneChange("Menu");
+        Time.timeScale = 1f;
+    }
 }

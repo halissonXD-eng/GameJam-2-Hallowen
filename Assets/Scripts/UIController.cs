@@ -21,7 +21,7 @@ public class UIController : MonoBehaviour
         AudioManager.Instance.PlaySFX(clip);
     }
     public void SceneChange(string Scene)
-    {
+    { 
         GameManager.Instance.SceneChange(Scene);
     }
 }

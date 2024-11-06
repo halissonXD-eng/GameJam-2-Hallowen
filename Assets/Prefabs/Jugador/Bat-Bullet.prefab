@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7535920233110303368}
   - component: {fileID: 3648775183725292043}
   - component: {fileID: 6408050857518344682}
+  - component: {fileID: -4461897957318803992}
   m_Layer: 0
   m_Name: Bat-Bullet
   m_TagString: Bullet
@@ -126,7 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66275fea694ea646b8ba417f329f78d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpDamage: {fileID: 178835913425173858, guid: 534c254fe1c2a154ca154c82c3e942a7, type: 3}
 --- !u!58 &6408050857518344682
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -162,3 +162,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.019917762}
   serializedVersion: 2
   m_Radius: 0.18131551
+--- !u!95 &-4461897957318803992
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554490797108815621}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3e25455ad03953e4a9cf4b7b51b43a5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
